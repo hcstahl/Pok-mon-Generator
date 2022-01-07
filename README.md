@@ -117,22 +117,22 @@ I created the moving line by making the v = a variable that holds the Pokemon To
 
 
 # Deployment Notes
-Below is notes that allowed my application to be deployed successfully 
-1. Make sure thee is no install.packages 
-2. Should be no errors in the application! This means errors that pop up or warnings even when your application continues to run locally.
-3. Make sure you are using the correct dataset when you deploy your application.
-4. Your data set should not include empty columns. 
-EX: If importing from excel>CSV then uploading R should not show blank columns from excel that are not being used.
-6. Check to make sure the col names that output in the terminal are correct and include every column in your dataset.
-7. Data set and file should be in the same directory.
-8. Your data should be in the same directory so the import statement should be ("filename".csv") not ("/.../...filename.csv).
-9. DO not have a setwd(~) in the code.
-10. Switch to the Mark up tab in R to see any messages about Deployment issues.
+Below is notes that allowed my application to be deployed successfully <br />
+1. Make sure thee is no install.packages <br />
+2. Should be no errors in the application! This means errors that pop up or warnings even when your application continues to run locally.<br />
+3. Make sure you are using the correct dataset when you deploy your application.<br />
+4. Your data set should not include empty columns. <br />
+EX: If importing from excel>CSV then uploading R should not show blank columns from excel that are not being used.<br />
+6. Check to make sure the col names that output in the terminal are correct and include every column in your dataset.<br />
+7. Data set and  application file should be in the same directory.<br />
+8. Your data should be in the same directory so the import statement should be ("filename".csv") not ("/.../...filename.csv).<br />
+9. DO not have a setwd(~) in the code.<br />
+10. Switch to the Mark up tab in R to see any messages about Deployment issues.<br />
 
 **Even the smallest errors that don't disrupt your local application can interupt Deployment.**
 
 # Helpful References
-[Guide to HTML Tags](https://shiny.rstudio.com/articles/tag-glossary.html)
-['Guide to Debugging Rshiny Errors](https://shiny.rstudio.com/articles/debugging.html)
-['R Shiny Data Table Customization](https://rstudio.github.io/DT/shiny.html)
+[Guide to HTML Tags](https://shiny.rstudio.com/articles/tag-glossary.html)<br />
+['Guide to Debugging Rshiny Errors](https://shiny.rstudio.com/articles/debugging.html)<br />
+['R Shiny Data Table Customization](https://rstudio.github.io/DT/shiny.html)<br />
 
