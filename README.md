@@ -64,8 +64,8 @@ The tags$br allows for the text to stay on the esame line.<br />
 **Line 169**: Starts the function for the back end part of the application.<br />
 
 **Line 170 - 238**: Includes every action that will occur when the "actionbutton" is pressed. This is the "Complete" Button on the top of the page.<br />
-**Line 170** Connects every action to the button with the ({ to the $actionbutton.<br />
-**Line 171 - 177** Converts the inputs from the user to the correct type.This will let us compare and perform calculations with the user input to our actual data set.<br />
+**Line 170**: Connects every action to the button with the ({ to the $actionbutton.<br />
+**Line 171 - 177**: Converts the inputs from the user to the correct type.This will let us compare and perform calculations with the user input to our actual data set.<br />
 **Line 179 -191**: Is details on how the generator was created, and how the table was able to match the output of the generator.<br />
 1. The Total score was calculated by adding each user input<br />
 2. A range was created based on this total.<br />
@@ -107,7 +107,7 @@ I created the moving line by making the v = a variable that holds the Pokemon To
  The grid.arrange function to combine the two charts together side by side.<br />
 
 
-**Line 238:** This } Ends the contents inside of the Action Button.<br />
+**Line 238**: This } Ends the contents inside of the Action Button.<br />
 
 **Line 241- 292**: Includes every action that will occur when the "randombutton": is pressed.<br />
 *The same code for the Action Button is inside the randombutton to generate the same output for each button.*<br />
@@ -133,6 +133,6 @@ EX: If importing from excel>CSV then uploading R should not show blank columns f
 
 # Helpful References
 [Guide to HTML Tags](https://shiny.rstudio.com/articles/tag-glossary.html)<br />
-['Guide to Debugging Rshiny Errors](https://shiny.rstudio.com/articles/debugging.html)<br />
-['R Shiny Data Table Customization](https://rstudio.github.io/DT/shiny.html)<br />
+[Guide to Debugging Rshiny Errors](https://shiny.rstudio.com/articles/debugging.html)<br />
+[R Shiny Data Table Customization](https://rstudio.github.io/DT/shiny.html)<br />
 
