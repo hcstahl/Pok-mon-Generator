@@ -58,11 +58,11 @@ wwlegend<-waffle(leg, rows =5,size=1,colors = c("#494746","#FAF5EF"),legend_pos 
 
 ui <- fluidPage(
     theme = bs_theme(version = 5, bootswatch = "minty"),
-    titlePanel("What Pokemon will choose you?"),
+    titlePanel("What Pokémon will choose you?"),
     
     sidebarLayout(
         sidebarPanel(
-            tags$text("Everytime you hit a button your Pokemon will change!"),
+            tags$text("Everytime you hit a button your Pokémon will change!"),
             actionButton("actionbutton", label = "Complete",width =130),
             actionButton("randombutton", label = "Random",width =100),
             tags$hr(),
@@ -109,48 +109,48 @@ ui <- fluidPage(
         
         mainPanel(
             tabsetPanel(
-                tabPanel("Your Pokemon",tags$h1('Your Pokemon is....',textOutput("p"))
+                tabPanel("Your Pokémon",tags$h1('Your Pokémon is....',textOutput("p"))
                          ,uiOutput("link")
                          ,tags$hr()
                          ,DT::dataTableOutput("mytable"))
-                         ,tabPanel("Visual",tags$text("Receive your Pokemon to see the graphs!")
-                          ,tags$h1('Your Pokemon is....',textOutput("p2"))
+                         ,tabPanel("Visual",tags$text("Receive your Pokémon to see the graphs!")
+                          ,tags$h1('Your Pokémon is....',textOutput("p2"))
                           ,tags$hr()
-                          ,tags$text("The dotted line is your current Pokemon")
-                          ,tags$h3("Frequency of Total Score For All Pokemon")
+                          ,tags$text("The dotted line is your current Pokémon")
+                          ,tags$h3("Frequency of Total Score For All Pokémon")
                           ,plotOutput("distPlot")
-                          ,tags$h3("The Percent of Pokemon In Each Generation")
+                          ,tags$h3("The Percent of Pokémon In Each Generation")
                           ,tags$text("Each box represents 1%","1 = Generation 1")
                           ,plotOutput("distplot3")
-                          ,tags$h3("The Percent Of Legendary Pokemon")
-                          ,tags$text("Only 8% of Pokemon are Legendary!")
+                          ,tags$h3("The Percent Of Legendary Pokémon")
+                          ,tags$text("Only 8% of Pokémon are Legendary!")
                           ,plotOutput("distplot4")
-                          ,tags$h3("The Total Number Of Pokemon For Each Type")
+                          ,tags$h3("The Total Number Of Pokémon For Each Type")
                           ,tags$text("Type 1 on the left")
                           ,plotOutput("distPlo2t")
                           ,tags$hr())
                 ,tabPanel("Help",tags$h1("Guide")
                           ,tags$hr()
-                          ,tags$br("ID: Is the ID from the pokedex associated with each Pokemon")
-                          ,tags$br("Type1: Is the main type of your Pokemon")
-                          ,tags$br("Type2: Is if the pokemon has a second type.")
-                          ,tags$br("HP: Is how healthy your Pokemon is.")
+                          ,tags$br("ID: Is the ID from the pokédex associated with each Pokémon")
+                          ,tags$br("Type1: Is the main type of your Pokémon")
+                          ,tags$br("Type2: Is if the Pokémon has a second type.")
+                          ,tags$br("HP: Is how healthy your Pokémon is.")
                           ,tags$br("Attack: Is the speed for normal attacks.")
                           ,tags$br("Defense:Is the damage resistance for normal attacks.")
                           ,tags$br("Sp.Atk: Is the speed for special attacks.")
                           ,tags$br("Sp.Def: Is the damage resistance for special attacks.")
-                          ,tags$br("Speed: Is how quick your Pokemon moves.")
-                          ,tags$br("Generation: Is what generation your Pokemon is apart of.")
-                          ,tags$br("Legendary: Is if your Pokemon is a true legend!")
+                          ,tags$br("Speed: Is how quick your Pokémon moves.")
+                          ,tags$br("Generation: Is what generation your Pokémon is apart of.")
+                          ,tags$br("Legendary: Is if your Pokémon is a true legend!")
                           ,tags$hr()
                           ,tags$h1('How the Calculator Works')
                           ,tags$hr()
-                          ,tags$br("Just because you want the best Pokemon doesn't mean the Pokemon will choose you!")
-                          ,tags$br("The Pokemon total is calculated by adding each numeric field for a total value.")
-                          ,tags$br("Then your total is converted to a range. Your range is then checked against the Total score for each Pokemon of the same type you choose.")
-                          ,tags$br("If your Pokemon type does not have a total score within your range then you will receive a Pokemon with a random total of the same Pokemon Type.")
-                          ,tags$br("Your Pokemon type is the first priority!")
-                          ,tags$br("The random button will generate a random Pokemon and disregard any input.")
+                          ,tags$br("Just because you want the best Pokémon doesn't mean the Pokémon will choose you!")
+                          ,tags$br("The Pokémon total is calculated by adding each numeric field for a total value.")
+                          ,tags$br("Then your total is converted to a range. Your range is then checked against the Total score for each Pokémon of the same type you choose.")
+                          ,tags$br("If your Pokémon type does not have a total score within your range then you will receive a Pokémon with a random total of the same Pokémon Type.")
+                          ,tags$br("Your Pokémon type is the first priority!")
+                          ,tags$br("The random button will generate a random Pokémon and disregard any input.")
                           ,tags$hr())
                           ,tabPanel("Source",tags$h1('Data Set Source')
                           ,tags$hr()
@@ -190,7 +190,7 @@ server <- function(input, output, session) {
         output$min<-renderPrint(low)
         sub3<-subset(data,Name == pokemon)
         linkimage<-sub3$imageurl
-        output$link<-renderUI(tags$a(href= linkimage,target="_blank","Click here to see your Pokemon"))
+        output$link<-renderUI(tags$a(href= linkimage,target="_blank","Click here to see your Pokémon"))
        
         
         output$mytable<-DT::renderDataTable(sub3[,1:13],options = list(
@@ -245,7 +245,7 @@ server <- function(input, output, session) {
         output$p2<-renderText(pokemon)
         sub3<-subset(data,Name == pokemon)
         linkimage<-sub3$imageurl
-        output$link<-renderUI(tags$a(href= linkimage,target="_blank","Click here to see your Pokemon"))
+        output$link<-renderUI(tags$a(href= linkimage,target="_blank","Click here to see your Pokémon"))
        
         output$mytable<-DT::renderDataTable(sub3[,1:13],options = list(
             searching = FALSE,
@@ -298,6 +298,9 @@ server <- function(input, output, session) {
     
 }
 shinyApp(ui, server)
+
+
+
 
 
 
