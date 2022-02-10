@@ -1,5 +1,5 @@
 # PokemonGenerator
-Application in Rshiny that generates a Pokemon based on user input and displays the Pokemon and visulizations.
+Application in Rshiny that generates a Pokémon based on user input and displays the Pokémon and visualizations.
 https://haileystahl.shinyapps.io/PokemonGenerator/
 # Table of Contents
 [Start](#Start)<br />
